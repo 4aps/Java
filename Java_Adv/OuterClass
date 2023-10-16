@@ -1,0 +1,26 @@
+// package OOPsInJava;
+
+public class OuterClass {
+    private int outerData;
+
+    public OuterClass(int data) {
+        this.outerData = data;
+    }
+
+    public static class StaticNestedClass {
+        private int nestedData;
+
+        public StaticNestedClass(int data) {
+            this.nestedData = data;
+        }
+
+        public void display() {
+            System.out.println("Nested data: " + nestedData);
+        }
+    }
+
+    public static void main(String[] args) {
+        StaticNestedClass nestedObj = new StaticNestedClass(42);
+        nestedObj.display(); // Output: Nested data: 42
+    }
+}
